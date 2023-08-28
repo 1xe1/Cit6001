@@ -36,7 +36,7 @@
 </style>
 <body>
     <div class="dashboard-container">
-        <?php include('./sidebar.php');?>
+        <?php include('sidebar.php');?>
         <div class="content">
             <!-- ส่วนเนื้อหาของแต่ละเมนูจะถูกแสดงที่นี่ -->
         </div>

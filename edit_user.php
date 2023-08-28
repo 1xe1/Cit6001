@@ -35,7 +35,7 @@ mysqli_close($connection);
 <html>
 <head>
     <title>Edit User</title>
-    <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="./css/dashboard.css">
     <style>
         /* เพิ่มการกำหนดรูปแบบการแสดงผลสำหรับฟอร์มแก้ไขผู้ใช้ */
         .content {
@@ -86,7 +86,7 @@ mysqli_close($connection);
 </head>
 <body>
 <div class="dashboard-container">
-    <?php include('../sidebar.php');?>
+    <?php include('sidebar.php');?>
     <div class="dashboard-container">
         <div class="content">
             <h2>Edit User</h2>

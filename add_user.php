@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>Add User</title>
-    <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="./css/dashboard.css">
 </head>
 <body>
 <div class="dashboard-container">
-        <?php include('../sidebar.php');?>
+        <?php include('sidebar.php');?>
         <div class="content">
             <h2>Add User</h2>
             <form action="save_user.php" method="POST">

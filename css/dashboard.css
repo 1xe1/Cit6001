@@ -5,6 +5,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .dashboard-container {
     display: flex;
     height: 100vh;
@@ -36,7 +42,7 @@ body {
     padding-left: 20px;
 }
 
-.sidebar li:hover ul {
+.sidebar li:hover > ul {
     display: block;
 }
 

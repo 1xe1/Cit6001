@@ -16,7 +16,7 @@
 <html>
 <head>
     <title>Manage Users</title>
-    <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="./css/dashboard.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
@@ -42,7 +42,6 @@
         width: 70px;
         height: 40px;
         margin-right: 10px;
-        
     }
 
     myTable{
@@ -51,13 +50,14 @@
 </style>
 <body>
     <div class="dashboard-container">
-        <?php include('../sidebar.php');?>
+        <?php include('sidebar.php');?>
 
         <div class="content">
             <h2>User List</h2>
             <table id="myTable" class="display">
                 <thead>
                     <tr>
+                        <th>id</th>
                         <th>Name</th>
                         <th>Username</th>
                         <th>Email</th>
@@ -72,6 +72,7 @@
                 foreach ($users as $user) {
             ?>
                     <tr>
+                        <td><?php echo $user['id'];?></td>
                         <td><?php echo $user['name']; ?></td>
                         <td><?php echo $user['username']; ?></td>
                         <td><?php echo $user['email']; ?></td>
