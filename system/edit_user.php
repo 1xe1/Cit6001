@@ -86,20 +86,7 @@ mysqli_close($connection);
 </head>
 <body>
 <div class="dashboard-container">
-        <div class="sidebar">
-            <ul>
-                <li><a href="../Dashborad.php">Dashboard</a></li>
-                <li><a href="#">Invoices</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Customers</a></li>
-                <li><a href="#">System Users</a>
-                    <ul>
-                        <li><a href="add_user.php">Add User</a></li>
-                        <li><a href="user_list.php">Manage Users</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+    <?php include('../sidebar.php');?>
     <div class="dashboard-container">
         <div class="content">
             <h2>Edit User</h2>

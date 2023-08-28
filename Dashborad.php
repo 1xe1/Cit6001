@@ -103,19 +103,7 @@
 </style>
 <body>
 <div class="sidebar">
-    <ul>
-        <li><a href="Dashborad.php">Dashboard</a></li>
-        <li><a href="#">Invoices</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Customers</a></li>
-        <li>
-            <a href="#">System Users</a>
-            <ul>
-                <li><a href="./system/add_user.php">Add User</a></li>
-                <li><a href="./system/user_list.php">Manage Users</a></li>
-            </ul>
-        </li>
-    </ul>
+    <?php include('./sidebar.php');?>
 </div>
 <section class="content">
     <!-- Small boxes (Stat box) -->

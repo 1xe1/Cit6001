@@ -30,7 +30,7 @@
                     // ปิดการเชื่อมต่อฐานข้อมูล
                     mysqli_close($connection);
                     ?>
-                                            <th>Name</th>
+                        <th>Name</th>
                         <th>Username</th>
                         <th>Email</th>
                         <th>Phone</th>
