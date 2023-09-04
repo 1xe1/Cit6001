@@ -1,0 +1,42 @@
+/* product_form.css */
+
+/* ตกแต่งฟอร์ม */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* สไตล์ของ label */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* สไตล์ของ input fields */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* สไตล์ของปุ่ม Submit */
+input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+input[type="submit"]:hover {
+    background-color: #000;
+}

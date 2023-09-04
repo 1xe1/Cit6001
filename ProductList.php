@@ -16,7 +16,8 @@
 <html>
 <head>
     <title>Manage Users</title>
-    <link rel="stylesheet" type="text/css" href="./css/dashboard.css">
+        <link rel="stylesheet" type="text/css" href="./css/dashboard.css">
+
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
@@ -25,10 +26,10 @@
             $('#myTable').DataTable();
         });
 
-        function confirmDelete(username) {
+        function confirmDelete(product_id) {
             var result = confirm("Are you sure you want to delete the user?");
             if (result) {
-                window.location.href = "delete_user.php?username=" + username;
+                window.location.href = "delete_data.php.php?product_id=" + product_id;
             }
         }
     </script>
@@ -58,27 +59,27 @@
             <table id="myTable" class="display">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Actions</th>
+                        <th>product_id</th>
+                        <th>product_name</th>
+                        <th>product_desc</th>
+                        <th>product_desc</th>
+                        <th>btn</th>
                     </tr>
                 </thead>
                 <tbody>
             <?php
-                $stmt = $conn->query("SELECT * FROM users");
+                $stmt = $conn->query("SELECT * FROM products");
                 $users = $stmt->fetchAll();
                 foreach ($users as $user) {
             ?>
                     <tr>
-                        <td><?php echo $user['name']; ?></td>
-                        <td><?php echo $user['username']; ?></td>
-                        <td><?php echo $user['email']; ?></td>
-                        <td><?php echo $user['phone']; ?></td>
+                        <td><?php echo $user['product_id']; ?></td>
+                        <td><?php echo $user['product_name']; ?></td>
+                        <td><?php echo $user['product_desc']; ?></td>
+                        <td><?php echo $user['product_price']; ?></td>
                         <td>
-                            <button class="btn"><a href='edit_user.php?username=<?php echo $user['username']; ?>'>Edit</a></button>
-                            <button onclick="confirmDelete('<?php echo $user['username']; ?>')">Delete</button>
+                            <button class="btn"><a href='add_Product.php?product_id=<?php echo $user['product_id']; ?>'>Edit</a></button>
+                            <button onclick="confirmDelete('<?php echo $user['product_id']; ?>')">Delete</button>
                         </td>
                     </tr>
             <?php

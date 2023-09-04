@@ -28,7 +28,7 @@
         function confirmDelete(username) {
             var result = confirm("Are you sure you want to delete the user?");
             if (result) {
-                window.location.href = "delete_user.php?username=" + username;
+                window.location.href = "delete_data.php?username=" + username;
             }
         }
     </script>
@@ -78,7 +78,7 @@
                         <td><?php echo $user['email']; ?></td>
                         <td><?php echo $user['phone']; ?></td>
                         <td>
-                            <button class="btn"><a href='edit_user.php?username=<?php echo $user['username']; ?>'>Edit</a></button>
+                            <button class="btn"><a href='add_user.php?username=<?php echo $user['username']; ?>'>Edit</a></button>
                             <button onclick="confirmDelete('<?php echo $user['username']; ?>')">Delete</button>
                         </td>
                     </tr>
